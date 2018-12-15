@@ -28,6 +28,13 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+
+    window.dancers.push(dancer);
   });
+
+  $('.addLineUpButton').on('click', function(event) {
+    MakeDancer.prototype.lineUp();
+  });
+
 });
 

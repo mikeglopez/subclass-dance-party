@@ -31,3 +31,18 @@ MakeDancer.prototype.setPosition = function(top, left) {
 
   this.$node.css(styleSettings);
 };
+
+MakeDancer.prototype.lineUp = function() {
+  for (var i = 0; i < window.dancers.length; i++) {
+    var curr = window.dancers[i].constructor.name;
+    if (curr === 'MakeBlinkyDancer') {
+      window.dancers[i].$node.css({top: 100});
+    }
+    if (curr === 'MakeSlidingDancer') {
+      window.dancers[i].$node.css({top: 300});
+    }
+    if (curr === 'MakeTwirlyDancer') {
+      window.dancers[i].$node.css({top: 500});
+    }
+  }
+};
