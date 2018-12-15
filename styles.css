@@ -28,5 +28,27 @@ body, a:link, a:visited, a:active{
 .slidingDancer{
   border:10px solid blue;
   border-radius:10px;
-  position:absolute;
+  position:fixed;
+  animation-name:slider;
+  animation-duration:4s;
+  animation-iteration-count:infinite;
+}
+
+.twirlyDancer{
+  border:10px solid orange;
+  position:fixed;
+  animation-name:twirl;
+  animation-duration:4s;
+  animation-iteration-count:infinite;
+}
+@keyframes slider {
+  0% {left:10%}
+  25% {left:30%}
+  75% {left:40%}
+  100% {left:10%}
+}
+
+@keyframes twirl {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }
