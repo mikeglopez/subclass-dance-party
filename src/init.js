@@ -36,5 +36,28 @@ $(document).ready(function() {
     MakeDancer.prototype.lineUp();
   });
 
+  $('.addInteractButton').on('click', function(event) {
+    var firstBlinker, firstSlider, firstTwirler;
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      var dancerType = window.dancers[i].constructor.name;
+
+      window.dancers[i].$node.css({top: 400});
+
+      if (!firstBlinker && dancerType === 'MakeBlinkyDancer') {
+        firstBlinker = i;
+      }
+      if (!firstSlider && dancerType === 'MakeSlidingDancer') {
+        firstSlider = i;
+      }
+      if (!firstTwirler && dancerType === 'MakeTwirlyDancer') {
+        firstTwirler = i;
+      }
+    }
+
+
+
+  });
+
 });
 
