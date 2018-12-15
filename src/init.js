@@ -43,18 +43,17 @@ $(document).ready(function() {
       var dancerType = window.dancers[i].constructor.name;
 
       window.dancers[i].$node.css({top: 400});
-
+      // save first of each kind of dancer
       if (!firstBlinker && dancerType === 'MakeBlinkyDancer') {
-        firstBlinker = i;
+        firstBlinker = window.dancers[i];
       }
       if (!firstSlider && dancerType === 'MakeSlidingDancer') {
-        firstSlider = i;
+        firstSlider = window.dancers[i];
       }
       if (!firstTwirler && dancerType === 'MakeTwirlyDancer') {
-        firstTwirler = i;
+        firstTwirler = window.dancers[i];
       }
     }
-
 
 
   });
