@@ -15,6 +15,15 @@ $(document).ready(function() {
      * A new object of the given type will be created and added
      * to the stage.
      */
+
+    $('span').hover(
+      function() {
+        $('span').css('opacity', '0.5');
+      }, function () {
+        $('span').css('opacity', '1');
+      }
+    );
+
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
 
     // get the maker function for the kind of dancer we're supposed to make
