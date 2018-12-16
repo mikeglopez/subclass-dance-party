@@ -37,26 +37,14 @@ $(document).ready(function() {
   });
 
   $('.addInteractButton').on('click', function(event) {
-    var firstBlinker, firstSlider, firstTwirler;
+    $('span.dancer:first').removeClass('dancer').addClass('blinkyInteraction');
+    $('span.slidingDancer:first').removeClass('slidingDancer').addClass('slidingInteraction');
+    $('span.twirlyDancer:first').removeClass('twirlyDancer').addClass('twirlingInteraction');
 
     for (var i = 0; i < window.dancers.length; i++) {
       var dancerType = window.dancers[i].constructor.name;
-
-      window.dancers[i].$node.css({top: 400});
-      // save first of each kind of dancer
-      if (!firstBlinker && dancerType === 'MakeBlinkyDancer') {
-        firstBlinker = window.dancers[i];
-      }
-      if (!firstSlider && dancerType === 'MakeSlidingDancer') {
-        firstSlider = window.dancers[i];
-      }
-      if (!firstTwirler && dancerType === 'MakeTwirlyDancer') {
-        firstTwirler = window.dancers[i];
-      }
+      window.dancers[i].$node.css({top: 600});
     }
-
-
   });
-
 });
 
