@@ -3,13 +3,15 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image:url('https://media.giphy.com/media/11bkUsaGJMt0t2/giphy.gif');
+  background-image:url('media/background.webp');
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-color:#444;
   font-size: 18px;
+  font-variant: small-caps;
+  font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -25,9 +27,13 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+.player{
+  position: fixed;
+  bottom: 0;
+}
 .dancer{
   position:absolute;
-  background-image:url('images/armani.png');
+  background-image:url('media/armani.png');
   background-size:cover;
   background-repeat: no-repeat;
   height:100px;
@@ -39,7 +45,7 @@ body, a:link, a:visited, a:active{
 
 .blinkyInteraction{
   position:absolute;
-  background-image:url('images/armani.png');
+  background-image:url('media/armani.png');
   background-size:cover;
   background-repeat: no-repeat;
   height:200px;
@@ -51,7 +57,7 @@ body, a:link, a:visited, a:active{
 
 .slidingDancer{
   position:absolute;
-  background-image:url('images/rupert.png');
+  background-image:url('media/rupert.png');
   background-size:cover;
   background-repeat: no-repeat;
   height:100px;
@@ -63,7 +69,7 @@ body, a:link, a:visited, a:active{
 
 .slidingInteraction{
   position:absolute;
-  background-image:url('images/rupert.png');
+  background-image:url('media/rupert.png');
   background-size:cover;
   background-repeat: no-repeat;
   height:200px;
@@ -75,7 +81,7 @@ body, a:link, a:visited, a:active{
 
 .twirlyDancer{
   position:absolute;
-  background-image:url('images/ezra.png');
+  background-image:url('media/ezra.png');
   background-size:cover;
   background-repeat: no-repeat;
   height:100px;
@@ -87,7 +93,7 @@ body, a:link, a:visited, a:active{
 
 .twirlingInteraction{
   position:absolute;
-  background-image:url('images/ezra.png');
+  background-image:url('media/ezra.png');
   background-size:cover;
   background-repeat: no-repeat;
   height:200px;
