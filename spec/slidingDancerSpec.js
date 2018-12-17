@@ -1,12 +1,13 @@
 describe('slidingDancer', function() {
-
   var slidingDancer;
   var slidyDancer;
-  var timeBetweenSteps = 100;
+  var timeBetweenSteps = Math.random() * 1000;
+  var top = 10 * Math.random();
+  var left = 10 * Math.random();
 
   beforeEach(function() {
-    slidingDancer = new MakeSlidingDancer(10, 20, timeBetweenSteps);
-    slidyDancer = new MakeSlidingDancer(10, 20, timeBetweenSteps);
+    slidingDancer = new MakeSlidingDancer(top, left, timeBetweenSteps);
+    slidyDancer = new MakeSlidingDancer(10 * Math.random(), 10 * Math.random(), timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
@@ -19,6 +20,10 @@ describe('slidingDancer', function() {
 
   it('should have positional values for each instance', function() {
     expect(slidingDancer.top).to.exist;
+  });
+
+  it('should have randomized positional values', function() {
+    expect(slidingDancer.left).to.not.equal(slidyDancer.left);
   });
 
 });
